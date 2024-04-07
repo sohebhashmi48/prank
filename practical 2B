@@ -1,0 +1,21 @@
+class Q2{
+    public static void main(String args[]){
+        int decimal = 13;
+        String binary = decimalToBinary(decimal);
+        System.out.println("Decimal number: " + decimal);
+        System.out.println("Binary number: " + binary);
+
+        String binNum = "1101";
+        int decNum = binaryToDecimal(binNum);
+        System.out.println("Binary number: " + binNum);
+        System.out.println("Decimal number: " + decNum);
+    }
+
+    public static int binaryToDecimal(String bin){
+        return Integer.parseInt(bin, 2);
+    }
+
+    public static String decimalToBinary(int dec){
+        return Integer.toBinaryString(dec);
+    }
+}
