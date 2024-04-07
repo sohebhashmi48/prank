@@ -1,0 +1,20 @@
+class ise {
+    public static void main(String[] args) {
+        int[] array = {10, 5, 20, 20, 15};
+        int l = array[0];
+        int s = array[0];
+
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > l) {
+                l = array[i];
+            }
+            if (array[i] < s) {
+                s = array[i];
+            }
+        }
+
+        System.out.println("array: " + java.util.Arrays.toString(array));
+        System.out.println("largest element: " + l);
+        System.out.println("smallest element: " + s);
+    }
+}
