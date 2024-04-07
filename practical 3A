@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+class Scout {
+    public static void main(String[] args) {
+        Scanner ss = new Scanner(System.in);
+        System.out.println("Enter a string:");
+        String input = ss.nextLine();
+
+        int[] counts = countCharacter(input);
+
+        System.out.println("String: " + input);
+        System.out.println("Numbers in string: " + counts[0]);
+        System.out.println("Spaces in string: " + counts[1]);
+        System.out.println("Letters in string: " + counts[2]);
+        System.out.println("Other Characters in string: " + counts[3]);
+    }
+
+    public static int[] countCharacter(String str) {
+        int[] counts = new int[4];
+
+        for (char c : str.toCharArray()) {
+            if (Character.isDigit(c)) {
+                counts[0]++;
+            } else if (Character.isWhitespace(c)) {
+                counts[1]++;
+            } else if (Character.isLetter(c)) {
+                counts[2]++;
+            } else {
+                counts[3]++; // Count other characters
+            }
+        }
+
+        return counts;
+    }
+}
