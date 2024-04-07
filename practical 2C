@@ -1,0 +1,15 @@
+class Ma {
+    void Show() {
+        System.out.println("Show method 1");
+    }
+
+    void Show(String a) {
+        System.out.println(a);
+    }
+
+    public static void main(String args[]) {
+        Ma obj = new Ma();
+        obj.Show();
+        obj.Show("Hello");
+    }
+}
