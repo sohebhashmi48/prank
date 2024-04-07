@@ -1,0 +1,30 @@
+public class MyClass {
+    private int value;
+
+    // Constructor: Initializes the 'value' field
+    public MyClass(int initialValue) {
+        value = initialValue;
+        System.out.println("Constructor called. Value set to " + value);
+    }
+
+    // Destructor (finalize method): Cleans up resources before object destruction
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("Destructor called. Cleaning up resources for value " + value);
+        super.finalize();
+    }
+
+    public static void main(String[] args) {
+        // Create an instance of MyClass
+        MyClass myObject = new MyClass(42);
+
+        // Perform some operations with myObject
+        // ...
+
+        // Explicitly set myObject to null to trigger garbage collection
+        myObject = null;
+
+        // Force garbage collection (usually not necessary)
+        System.gc();
+    }
+}
