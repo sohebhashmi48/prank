@@ -1,0 +1,14 @@
+class Sumof {
+    public static void main(String args[]) {
+        String bn1 = "1011";
+        String bn2 = "1101";
+
+        int n1 = Integer.parseInt(bn1,2);
+        int n2 = Integer.parseInt(bn2,2);
+
+        int sum = n1 + n2;
+        String binsum = Integer.toBinaryString(sum);
+
+        System.out.println("Sum of " + bn1 + " and " + bn2 + " is " + binsum);
+    }
+}
